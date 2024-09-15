@@ -5,7 +5,7 @@
 # app = Flask(__name__)
 
 # # MongoDB Atlas connection string (replace with your URI)
-# app.config["MONGO_URI"] = "mongodb+srv://ishayadav77199:Muktsar1234@cluster0.fkpry.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+# app.config["MONGO_URI"] = "mongodb+srv://jatinbansal80173:Jatinbansal1234@cluster0.twxzv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 # # Initialize PyMongo
 # mongo = PyMongo(app)
