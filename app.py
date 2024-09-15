@@ -93,10 +93,16 @@ from pymongo import MongoClient, errors
 from bson.objectid import ObjectId
 import os
 
+import certifi
+
+
 app = Flask(__name__)
 
 # MongoDB Atlas connection string
-MONGO_URI = os.getenv('MONGO_URI', 'mongodb+srv://ishayadav77199:Muktsar1234@cluster0.fkpry.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+# MONGO_URI = os.getenv('MONGO_URI', 'mongodb+srv://ishayadav77199:Muktsar1234@cluster0.fkpry.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+MONGO_URI = os.getenv('MONGO_URI', 'mongodb+srv://ishayadav77199:Muktsar1234@cluster0.fkpry.mongodb.net/?retryWrites=true&w=majority&tls=true&tlsAllowInvalidCertificates=true')
+
+client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 
 try:
     client = MongoClient(MONGO_URI)
